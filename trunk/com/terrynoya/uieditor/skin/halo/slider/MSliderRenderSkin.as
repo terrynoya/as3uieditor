@@ -12,6 +12,7 @@ package com.terrynoya.uieditor.skin.halo.slider
 		{
 			super();
 			this._trackSkin = new MSliderTrackRenderSkin();
+			this._sliderSkin = new MSliderThumbRenderSkin();
 		}
 		
 		public function get tackSkin():DisplayObject
@@ -20,7 +21,7 @@ package com.terrynoya.uieditor.skin.halo.slider
 		}
 		public function get thumbSkin():DisplayObject
 		{
-			return this._trackSkin; 
+			return this._sliderSkin; 
 		}
 	}
 }
