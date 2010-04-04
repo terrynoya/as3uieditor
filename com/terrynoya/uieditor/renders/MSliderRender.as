@@ -45,10 +45,10 @@ package com.terrynoya.uieditor.renders
 			this._renderSkin = new MSliderRenderSkin(); 
 			
 			this._track = this._renderSkin.tackSkin;
-//			this._thumb = this._renderSkin.thumbSkin;
+			this._thumb = this._renderSkin.thumbSkin;
 			
 			this.addChild(this._track);
-//			this.addChild(this._thumb);
+			this.addChild(this._thumb);
 		}
 	}
 }
