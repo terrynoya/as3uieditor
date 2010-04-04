@@ -11,12 +11,12 @@ package com.terrynoya.uieditor.core
      * 视图编辑器中的UI控件变换容器
      * @author TerryYao
      */
-    public class MTransformBox extends MUIComponent
+    public class MTransformBox extends MUIComponent implements IMTransformBox
     {
         private var _transformToolKit:MUIToolKit;
-
+		
         private var _content:MUIRender;
-
+		
         /**
          *
          */
@@ -58,7 +58,6 @@ package com.terrynoya.uieditor.core
         	super.updateView();
             this._content.x = this._transformToolKit.nodeWidth / 2;
             this._content.y = this._transformToolKit.nodeHeight / 2;
-        	
         }
 
         /**
@@ -105,7 +104,6 @@ package com.terrynoya.uieditor.core
 		}
 		
 		private var _downPoint:Point;
-		private var localOffsetPoint:Point = new Point(0,0);
 		private var _downPos:Point;
 		
 		private function onMouseDown(e:MouseEvent):void
@@ -113,7 +111,6 @@ package com.terrynoya.uieditor.core
 			this.startDraging();
 			this._downPoint = new Point(e.stageX,e.stageY);
 			this._downPos = new Point(this.x,this.y);			
-			this.localOffsetPoint = new Point(e.localX,e.localY);
 		}
 		
 		private function onMouseMove(e:MouseEvent):void
