@@ -4,7 +4,7 @@ package com.terrynoya.uieditor.skin.halo
 	
 	import flash.display.GradientType;
 
-	public class MCheckBoxRenderSkin extends MSkin
+	public class MCheckBoxRenderSkin extends MSkin implements IMRenderSkin
 	{
 		public function MCheckBoxRenderSkin()
 		{
