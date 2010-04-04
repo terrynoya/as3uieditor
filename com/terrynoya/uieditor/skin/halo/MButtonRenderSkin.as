@@ -4,7 +4,7 @@ package com.terrynoya.uieditor.skin.halo
 	
 	import flash.display.GradientType;
 
-	public class MButtonRenderSkin extends MSkin
+	public class MButtonRenderSkin extends MSkin implements IMRenderSkin 
 	{
 		private var cr:Number=4;
 		private var cr1:Number=Math.max(0, cornerRadius - 1);
