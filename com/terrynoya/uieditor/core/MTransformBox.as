@@ -40,6 +40,7 @@ package com.terrynoya.uieditor.core
         {
             this._transformToolKit.width = this._content.width;
             this._transformToolKit.height = this._content.height;
+            this.setChildIndex(this._transformToolKit,this.numChildren-1);
             this.updateView();
         }
 
