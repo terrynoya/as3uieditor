@@ -13,7 +13,7 @@ package com.terrynoya.uieditor.renders
 		private var _thumb:DisplayObject;
 		
 		private var _renderSkin:IMSliderRenderSkin;
-				
+		
 		public function MSliderRender()
 		{
 			super();
@@ -31,7 +31,7 @@ package com.terrynoya.uieditor.renders
 		
 		override public function get height():Number
 		{
-			return this._track.height;
+			return Math.max(this._track.height,this._thumb.height);
 		}
 		
 		override public function set height(value:Number):void
@@ -49,6 +49,8 @@ package com.terrynoya.uieditor.renders
 			
 			this.addChild(this._track);
 			this.addChild(this._thumb);
+			
+			this._thumb.y = -Math.abs((this._thumb.height - this._track.height)/2);
 		}
 	}
 }

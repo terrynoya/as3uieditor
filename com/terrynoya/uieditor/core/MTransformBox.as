@@ -2,7 +2,7 @@ package com.terrynoya.uieditor.core
 {
     import com.terrynoya.common.core.MUIComponent;
     import com.terrynoya.uieditor.events.MTransformToolKitEvent;
-
+    
     import flash.events.MouseEvent;
     import flash.geom.Point;
 
@@ -35,7 +35,12 @@ package com.terrynoya.uieditor.core
         {
             //this method must be overridden
         }
-
+		
+		protected function get transfromToolKit():MUIToolKit
+    	{
+    		return this._transformToolKit;
+    	}
+    	
         protected function renderCreated():void
         {
             this._transformToolKit.width = this._content.width;
@@ -81,12 +86,9 @@ package com.terrynoya.uieditor.core
         private function onTransfromUpdate(e:MTransformToolKitEvent):void
         {
             var info:MTransformInfo = e.transfromInfo;
-			
             this._content.width = info.width;
             this._content.height = info.height;
-
-            this._content.x = info.x + this._transformToolKit.nodeWidth/2;
-            this._content.y = info.y + this._transformToolKit.nodeHeight/2;
+            this.updateView();
         }
 
         private function startDraging():void

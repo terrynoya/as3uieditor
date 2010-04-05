@@ -17,5 +17,12 @@ package com.terrynoya.uieditor.control
 			this.content = new MSliderRender();
 			this.addChild(DisplayObject(this.content));
 		}
+		
+		override protected function updateView():void
+        {
+            super.updateView();
+            this.content.x = this.transfromToolKit.nodeWidth / 2;
+            this.content.y = this.transfromToolKit.nodeHeight / 2 + 4;
+        }
 	}
 }
